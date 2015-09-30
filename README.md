@@ -27,7 +27,20 @@ p.locations<< Location.new(name: "BíoBío")
 #Creando Ciudades
 Luego de tener un país y una provincia, creamos una ciudad con el siguiente código:
 ```ruby
-#primero igualamos la variable p a la provincio
+#primero igualamos la variable p a la provincia
 p = Location.find_by_name "BíoBío"
 p.locations<< Location.new(name: "Concepción")
+```
+#Obteniendo el nombre del padre
+Una vez creado un País, su provincia y una ciudad de la provincia, resulta útil saber cómo acceder al nombre del padre o, en otras palabras, es necesario saber a cuál provincia pertenece cada ciudad o a cuál país pertenece cada provincia. Para ésto, el código que nos permite obtener esta información es el siguiente:
+```ruby
+#igualamos la variable "c" a la Location en cuestión
+c = Location.find_by_name "Concepción"
+#Luego, para obtener el nombre de su provincia
+Location.find(c.parent_location_id).name
+#Para obtener el nombre del país de la provincia, se puede hacer lo siguiente
+p = Location.find(c.parent_location_id)
+#Después de igualar "p" a la provincia, aplicamos el mismo código, el cual nos dará el nombre del país
+Location.find(p.parent_location_id).name
+
 ```
