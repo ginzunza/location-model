@@ -24,3 +24,10 @@ p = Location.find_by_name "Chile"
 #a Chile le asignamos una provincia
 p.locations<< Location.new(name: "BíoBío")
 ```
+#Creando Ciudades
+Luego de tener un país y una provincia, creamos una ciudad con el siguiente código:
+```ruby
+#primero igualamos la variable p a la provincio
+p= Location.find_by_name "BíoBío"
+p.locations<< Location.new(name: "Concepción")
+```
