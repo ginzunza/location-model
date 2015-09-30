@@ -17,4 +17,10 @@ Lo primero que se debe crear, para mantener la consistencia entre las relaciones
 Location.create(name:"Chile")
 ```
 #Creando Provincias
-Una vez creado el o los países se podrán crear las provincias. Cabe destacar que también se pueden crear provincias sin la existencia de países, pero será necesario hacer las relaciones más adelante.
+Una vez creado el o los países se podrán crear las provincias. Cabe destacar que también se pueden crear provincias sin la existencia de países, pero será necesario hacer las relaciones más adelante. El código para la creación de una provincia, siguiendo el ejemplo anterior, es el siguiente:
+```ruby
+#igualamos la variable "p" a la Location de Chile
+p = Location.find_by_name "Chile"
+#a Chile le asignamos una provincia
+p.locations<< Location.new(name: "BíoBío")
+```
