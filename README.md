@@ -32,7 +32,7 @@ p = Location.find_by_name "BíoBío"
 p.locations<< Location.new(name: "Concepción")
 ```
 #Obteniendo el nombre del padre
-Una vez creado un País, su provincia y una ciudad de la provincia, resulta útil saber cómo acceder al nombre del padre o, en otras palabras, es necesario saber a cuál provincia pertenece cada ciudad o a cuál país pertenece cada provincia. Para ésto, el código que nos permite obtener esta información es el siguiente:
+Una vez creado un País, su provincia y una ciudad de la provincia, resulta útil saber cómo acceder al nombre del padre o, en otras palabras, es necesario saber a cuál provincia pertenece cada ciudad o a cuál país pertenece cada provincia. Para ésto, el código que nos permite obtener esta información, es el siguiente:
 ```ruby
 #igualamos la variable "c" a la Location en cuestión
 c = Location.find_by_name "Concepción"
