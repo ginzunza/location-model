@@ -10,7 +10,14 @@ Location
   :parent_location_id => nil
 }
 ```
-
+Dentro de la Clase Location, se tienen las siguientes asociaciones:
+```ruby
+class Location < ActiveRecord::Base
+  # associations
+  belongs_to :parent_location, class_name: 'Location'
+  has_many :locations, foreign_key: 'parent_location_id'
+end
+```
 #Creando Países
 Lo primero que se debe crear, para mantener la consistencia entre las relaciones que habrán más adelante, son los países. La única diferencia que poseerá, respecto a las otras tablas, será que el atributo "parent_location_id" será Nil. Dicho eso, para la creación se debe utilizar la siguiente sintaxis:
 ```ruby
