@@ -1,5 +1,5 @@
 # location-model
-Un breve ejemplo sobre cómo crear Países, provincias y ciudades, dado un modelo "Location"
+Un breve ejemplo sobre cómo crear Países, provincias y ciudades, dado un modelo "Location". Cabe destacar que los ejemplos irán enfocados respecto a la estructura que posee Chile.
 # Modelo Location
 Se tiene el siguiente modelo en rails:<br />
 Location<br />
