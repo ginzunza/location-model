@@ -16,3 +16,5 @@ Lo primero que se debe crear, para mantener la consistencia entre las relaciones
 ```ruby
 Location.create(name:"Chile")
 ```
+#Creando Provincias
+Una vez creado el o los países se podrán crear las provincias. Cabe destacar que también se pueden crear provincias sin la existencia de países, pero será necesario hacer las relaciones más adelante.
